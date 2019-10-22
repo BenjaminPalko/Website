@@ -1,0 +1,17 @@
+{% include 'navbar.html' %}
+
+<div class="container">
+    <h1 class="display-3 text-center">{{ post.text_title }}</h1>
+    <blockquote class="blockquote">
+        <p class="mb-0">{{ post.text_desc }}</p>
+        <footer class="blockquote-footer text-right">
+        Posted: {{ post.pub_date }}
+    </footer>
+    </blockquote>
+
+    <br>
+    <p class="border">
+        {% load markdown %}
+        {{ post.text_body | markdown | safe }}
+    </p>
+</div>
