@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('blog/', include(('blog.urls', 'blog'), namespace='Blog')),
     path('admin/', admin.site.urls),
+    path('martor/', include('martor.urls')),
 ]
