@@ -11,7 +11,7 @@
 
     <br>
     <p class="border">
-        {% load markdown %}
-        {{ post.text_body | markdown | safe }}
+        {% load martortags %}
+        {{ post.text_body | safe_markdown }}
     </p>
 </div>

@@ -129,3 +129,13 @@ dmypy.json
 .idea/
 
 *.sqlite3
+
+blog/migrations/
+
+static/admin/
+
+static/dicts/
+
+static/martor/
+
+static/plugins/
