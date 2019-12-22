@@ -1,17 +1,19 @@
-{% include 'navbar.html' %}
+{% extends 'base.html' %}
 
-<div class="container">
-    <h1 class="display-3 text-center">{{ post.text_title }}</h1>
-    <blockquote class="blockquote">
-        <p class="mb-0">{{ post.text_desc }}</p>
-        <footer class="blockquote-footer text-right">
-        Posted: {{ post.pub_date }}
-    </footer>
-    </blockquote>
+{% block content %}
+    <div class="container bg-light">
+        <h1 class="display-3 text-center mt-4 p-2">{{ post.text_title }}</h1>
+        <blockquote class="blockquote">
+            <p class="mb-0">{{ post.text_desc }}</p>
+            <footer class="blockquote-footer text-right">
+                Posted: {{ post.pub_date }}
+            </footer>
+        </blockquote>
 
-    <br>
-    <p class="border">
-        {% load martortags %}
-        {{ post.text_body | safe_markdown }}
-    </p>
-</div>
+        <br>
+        <p class="border">
+            {% load martortags %}
+            {{ post.text_body | safe_markdown }}
+        </p>
+    </div>
+{% endblock %}
