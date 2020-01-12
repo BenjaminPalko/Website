@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <link rel="stylesheet" href="{% static 'custom/css/home.css' %}" type="text/css">
-    <div class="container-fluid background">
-    </div>
+    <body style="
+            background: url('{% static 'images/hello.jpg' %}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            ">
+    </body>
 {% endblock %}

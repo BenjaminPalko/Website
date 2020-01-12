@@ -1,19 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container bg-light">
-        <h1 class="display-3 text-center mt-4 p-2">{{ post.text_title }}</h1>
-        <blockquote class="blockquote">
-            <p class="mb-0">{{ post.text_desc }}</p>
-            <footer class="blockquote-footer text-right">
-                Posted: {{ post.pub_date }}
-            </footer>
-        </blockquote>
+    <body>
+    <div class="shadow container rounded my-4">
 
-        <br>
-        <p class="border">
-            {% load martortags %}
-            {{ post.text_body | safe_markdown }}
-        </p>
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3 text-center mt-4 p-2">{{ post.text_title }}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <blockquote class="blockquote">
+                    <p class="mb-0 text-muted">{{ post.text_desc }}</p>
+                    <footer class="blockquote-footer text-right">
+                        Posted: {{ post.pub_date }}
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <br>
+                <p class="border">
+                    {% load martortags %}
+                    {{ post.text_body | safe_markdown }}
+                </p>
+            </div>
+        </div>
+
+
     </div>
+    </body>
 {% endblock %}

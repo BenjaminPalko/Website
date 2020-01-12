@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container mt-4 bg-light">
-        <h1 class="text-center">About</h1>
+    <link rel="stylesheet" href="{% static 'css/social-share.css' %}"
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <body style="
+            background: url('{% static 'images/work.jpg' %}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            ">
+    <div class="shadow-lg container mt-4 p-5 rounded-lg border border-dark">
+
         <div class="row">
             <div class="col-4">
-                <p>Stuff about me</p>
-                <br>
-                <p>Stuff about me</p>
-                <br>
-                <p>Stuff about me</p>
-                <br>
-                <p>Stuff about me</p>
-                <br>
-                <p>Stuff about me</p>
-                <br>
+                <img class="img-thumbnail rounded bg-dark border border-dark" src="{% static 'images/portrait.jpg' %}" alt="Portrait">
             </div>
-            <div class="col-2">
-                <img class="img-thumbnail rounded float-right" src="{% static 'images/portrait.jpg' %}" alt="Portrait">
+            <div class="col-8">
+                <!--    PLACEHOLDER -->
             </div>
         </div>
     </div>
+    </body>
 {% endblock %}
