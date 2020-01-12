@@ -6,7 +6,7 @@ from datetime import date
 class Post(models.Model):
     DESIGN = 'DE'
     LIFE = 'LF'
-    OFFTOPIC = 'OF'
+    OFFTOPIC = 'OT'
     CATEGORY_CHOICES = (
         (DESIGN, 'Design'),
         (LIFE, 'Life'),
