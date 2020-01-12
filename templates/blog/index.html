@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+    <body style="
+            background: url('{% static 'images/title-background.jpg' %}') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            ">
     <div class="container pt-5">
         {% if blog_post_list %}
 
@@ -11,7 +18,7 @@
                 {% endif %}
             <div class="col-md-6">
                 <a class="list-group-item list-group-item-action"
-                   href="/blog/{{ post.text_title }}/">{{ post.text_title }}</a>
+                   href="/blog/{{ post.id }}/{{ post.text_title }}/">{{ post.text_title }}</a>
                 {% include 'util/bootstrap_card.html' with post=post %}
             </div>
             {% if forloop.counter|divisibleby:2 %}
@@ -26,4 +33,5 @@
             <h1 class="text-center">Nothing to see here, move along!</h1>
         {% endif %}
     </div>
+    </body>
 {% endblock %}

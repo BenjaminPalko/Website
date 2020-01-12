@@ -7,5 +7,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('<str:post_title>/', views.post, name='post'),
+    path('<int:post_id>/<str:post_title>/', views.post, name='post'),
 ]

@@ -8,11 +8,11 @@
             <strong class="d-inline-block mb-2 text-secondary">{{ post.text_category }}</strong>
         {% endif %}
         <h3 class="mb-0">
-            <a class="text-dark" href="/blog/{{ post.text_title }}/">{{ post.text_title }}</a>
+            <a class="text-dark" href="/blog/{{ post.id }}/{{ post.text_title }}/">{{ post.text_title }}</a>
         </h3>
         <div class="mb-1 text-muted">{{ post.pub_date }}</div>
         <p class="card-text mb-auto">{{ post.text_desc }}</p>
-        <a href="/blog/{{ post.text_title }}/">Continue reading</a>
+        <a href="/blog/{{ post.id }}/{{ post.text_title }}/">Continue reading</a>
     </div>
     <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb"
          alt="Thumbnail [200x250]"

@@ -9,6 +9,6 @@ def index(request):
     return render(request, 'blog/index.html', context)
 
 
-def post(request, post_title):
-    post = get_object_or_404(Post, text_title=post_title)
-    return render(request, 'blog/post.html', {'post': post})
+def post(request, post_id, post_title):
+    p = get_object_or_404(Post, text_title=post_title, id=post_id)
+    return render(request, 'blog/post.html', {'post': p})
