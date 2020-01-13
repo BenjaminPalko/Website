@@ -1,9 +1,22 @@
 language: python
-python:
-  - "3.8"
+python: 3.8
+
+# install dependencies
 install:
   - pip install -r requirements.txt
-env:
-  - DJANGO=2.2.8
+
+# run tests
 script:
-  - python manage.py syncdb --noinput
+  - python manage.py makemigrations
+  - python manage.py migrate --run-syncdb
+  - python manage.py collectstatic --noinput
+
+# notifications
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL

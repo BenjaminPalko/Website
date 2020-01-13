@@ -1,2 +1,3 @@
-django
-martor
+django==3.0.*
+martor==1.4.4
+gunicorn
