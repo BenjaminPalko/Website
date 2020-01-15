@@ -1,6 +1,13 @@
+# django-main
 dj-config-url==0.1.1
 django==2.2.9
+
+# markdown
 martor==1.4.4
+
+# staticfiles
 whitenoise==5.0.1
+
+# for heroku
 gunicorn==20.0.4
 psycopg2==2.8.4

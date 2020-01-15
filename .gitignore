@@ -128,17 +128,9 @@ dmypy.json
 # PyCharm project dir
 .idea/
 
-*.sqlite3
-
 # build files
 blog/migrations/
+*.sqlite3
 
-static/admin/
-
-static/dicts/
-
-static/martor/
-
-static/plugins/
-
+# static web files
 static/
