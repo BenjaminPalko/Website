@@ -4,7 +4,3 @@
 body {
     font-family: Roboto, monospace !important;
 }
-
-div.disabled {
-    overflow-x: hidden;
-}
