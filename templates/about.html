@@ -1,24 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{%  endblock %}
+
 {% block content %}
 
-    <body style="
-            background: url('{% static 'images/work.jpg' %}') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-            -o-background-size: cover;
-            ">
+    <body>
     <div class="container mt-5 p-5 rounded-lg shadow-lg">
 
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-md-4">
                 <img class="img-thumbnail rounded bg-dark border border-dark"
                      src="{% static 'images/portrait.jpg' %}"
                      alt="Portrait">
             </div>
-            <div class="col-12 col-md-8 shadow bg-transparent rounded">
+            <div class="col-md-8 shadow rounded bg-opaque">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non suscipit erat, et ultricies
                     libero. Proin ac magna eu est tempus pulvinar. Morbi lobortis lobortis ligula, a ultricies purus.
@@ -26,7 +24,6 @@
                     purus. Praesent maximus viverra felis sit amet ultrices.
                 </p>
                 <p>
-
                     Proin pretium aliquet ligula, id rutrum urna consectetur placerat. Nam ac placerat odio. Suspendisse
                     convallis quis augue ut iaculis. Curabitur tempor leo vel turpis sodales, eu tristique purus cursus.
                     Nulla eu venenatis nibh, in pellentesque urna. Cras mollis neque iaculis tortor finibus, id gravida

@@ -1,28 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/blog/index.css' %}"/>
+{% endblock %}
+
 {% block content %}
-    <body style="
-            background: url('{% static 'images/title-background.jpg' %}') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-            -o-background-size: cover;
-            ">
-    <div class="shadow-lg container mt-4 p-5 rounded-lg border border-dark">
+
+    <body>
+    <div class="shadow-lg container mt-4 p-5 rounded-lg bg-opaque">
         {% if blog_post_list %}
 
             {% for post in blog_post_list %}
                 {% if forloop.counter|divisibleby:2 is False %}
                     <div class="row mb-2">
                 {% endif %}
-            <div class="col-md-6">
-                <a class="list-group-item list-group-item-action"
-                   href="/blog/{{ post.id }}/{{ post.text_title }}/">{{ post.text_title }}</a>
-                {% include 'util/bootstrap_card.html' with post=post %}
-            </div>
-            {% if forloop.counter|divisibleby:2 %}
-                </div>
-            {% endif %}
+                    <div class="col-md-6">
+                        {% include 'blog/blogpost_card.html' with post=post %}
+                    </div>
+                {% if forloop.counter|divisibleby:2 %}
+                    </div>
+                {% endif %}
             {% endfor %}
             {% if blog_post_list.count|divisibleby:2 is False %}
                 </div>
@@ -33,4 +31,5 @@
         {% endif %}
     </div>
     </body>
+
 {% endblock %}
