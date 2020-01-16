@@ -8,24 +8,15 @@
 {% block content %}
 
     <body>
-    <div class="shadow-lg container mt-4 p-5 rounded-lg bg-opaque">
+    <div class="shadow-lg container mt-4 p-5">
         {% if blog_post_list %}
-
-            {% for post in blog_post_list %}
-                {% if forloop.counter|divisibleby:2 is False %}
-                    <div class="row mb-2">
-                {% endif %}
-                    <div class="col-md-6">
+            <ul class="list-group">
+                {% for post in blog_post_list %}
+                    <li class="list-group-item bg-transparent border border-0">
                         {% include 'blog/blogpost_card.html' with post=post %}
-                    </div>
-                {% if forloop.counter|divisibleby:2 %}
-                    </div>
-                {% endif %}
-            {% endfor %}
-            {% if blog_post_list.count|divisibleby:2 is False %}
-                </div>
-            {% endif %}
-
+                    </li>
+                {% endfor %}
+            </ul>
         {% else %}
             <h1 class="text-center">Nothing to see here, move along!</h1>
         {% endif %}

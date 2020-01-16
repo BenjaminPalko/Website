@@ -1,20 +1,21 @@
-<a class="list-group-item list-group-item-action"
-   href="/blog/{{ post.id }}/{{ post.text_title }}/">{{ post.text_title }}</a>
+<a class="list-group-item list-group-item-action" href="/blog/{{ post.id }}/{{ post.text_title }}/">
+    {% if post.text_category == post.DESIGN %}
+        <strong class="d-inline-block mb-2 text-success">DESIGN</strong>
+    {% elif post.text_category == post.LIFE %}
+        <strong class="d-inline-block mb-2 text-secondary">LIFE</strong>
+    {% elif post.text_category == post.OFFTOPIC %}
+        <strong class="d-inline-block mb-2 text-secondary">OFF-TOPIC</strong>
+    {% endif %}
+</a>
 
 <div class="card flex-md-row mb-4 shadow-sm h-md-250">
     <div class="card-body d-flex flex-column align-items-start">
-        {% if post.text_category == post.DESIGN %}
-            <strong class="d-inline-block mb-2 text-success">{{ post.text_category }}</strong>
-        {% elif post.text_category == post.LIFE %}
-            <strong class="d-inline-block mb-2 text-secondary">{{ post.text_category }}</strong>
-        {% elif post.text_category == post.OFFTOPIC %}
-            <strong class="d-inline-block mb-2 text-secondary">{{ post.text_category }}</strong>
-        {% endif %}
-        <h3 class="mb-0">
+        <h1 class="mb-0">
             <a class="text-dark" href="/blog/{{ post.id }}/{{ post.text_title }}/">{{ post.text_title }}</a>
-        </h3>
+        </h1>
+
         <div class="mb-1 text-muted">{{ post.pub_date }}</div>
-        <p class="card-text mb-auto">{{ post.text_desc }}</p>
+        <p class="card-text mb-auto mt-2">{{ post.text_desc }}</p>
         <a href="/blog/{{ post.id }}/{{ post.text_title }}/">Continue reading</a>
     </div>
     <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb"
