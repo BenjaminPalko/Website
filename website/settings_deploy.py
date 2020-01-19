@@ -27,8 +27,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'benjaminpalko-website.herokuapp.com',
-    'benjaminpalko.me'
+    'benjaminpalko.me',
+    '.benjaminpalko.me',
+    '*.herokuapp.com',
+    '*.herokudns.com'
 ]
 
 # Application definition
