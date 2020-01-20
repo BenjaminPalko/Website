@@ -133,4 +133,4 @@ blog/migrations/
 *.sqlite3
 
 # static web files
-static/
+/static/

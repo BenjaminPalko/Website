@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}{{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{%  endblock %}
+
+{% block content %}
+    <div class="supertemp">
+        <div class="container-fluid vh-100">
+            <img class="img-fluid" src="{% static 'images/hello.jpg' %}"  alt="Hello"/>
+        </div>
+    <div class="container-fluid vh-100">
+
+    </div>
+    </div>
+{% endblock %}
