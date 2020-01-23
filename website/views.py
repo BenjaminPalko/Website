@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-
-def home(request):
-    return render(request, 'index.html')
+from blog.models import Post
 
 
-def about(request):
-    return render(request, 'about.html')
+def index(request):
+    blog_post_list = Post.objects.order_by('-pub_date')
+    context = {'blog_post_list': blog_post_list}
+    return render(request, 'index.html', context)
