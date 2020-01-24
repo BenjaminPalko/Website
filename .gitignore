@@ -134,3 +134,5 @@ blog/migrations/
 
 # static web files
 /static/
+
+*.zip
