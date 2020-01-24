@@ -6,18 +6,19 @@
 {% endblock %}
 
 {% block content %}
-    <div class="bg-dark text-light">
+    <div>
 
-        <div class="d-flex flex-column">
+        <div class="bg-dark text-light">
 
             {# Title #}
-            <div class="container-fluid vh-100 bg-light text-dark d-flex align-content-center">
+            <div class="container-fluid vh-100 bg-light text-dark d-flex flex-column align-items-center">
 
-                <div class="align-self-center">
+
+                <div class="h-50 text-center mt-auto">
                     <h1 class="display-1">Benjamin Palko</h1>
                     <h4 class="display-4">Software Engineer</h4>
                 </div>
-                <div class="align-self-end display-4">
+                <div class="display-4  text-center pb-3">
                     <a class="about text-dark" href="#about">About</a>
                     /
                     <a class="blog text-dark" href="#blog">Blog</a>
@@ -28,19 +29,74 @@
             </div>
 
             {# About #}
-            <div class="container-fluid vh-100" id="about">
+            <div class="container vh-100" id="about">
+                <div class="container dynamic-text text-center px-5 my-3">
+                    <h1 class="display-2 text-center border-bottom mb-2">About</h1>
+                    <p>
+                        I'm a Software Engineering graduate from Carleton University living in Brockville,
+                        ON.
+                    </p>
+                    <p>
+                        I am currently working as a Junior Developer, spending the majority of my time with
+                        Java EE application servers. I work mainly Wildfly and Oracle databases for mapping
+                        logic of insurance data.
+                    </p>
+                    <p>
+                        I am expanding my skills to front-end web development with the Python on my own time,
+                        learning the Django frame-work to build my personal website.
+                    </p>
+                </div>
+                <h1 class="text-center display-3 my-5">Skills</h1>
                 <div class="row">
-                    <div class="col">
-                        <h1 class="display-1 text-center">About</h1>
+
+                    <div class="col-3 text-center">
+                        <i class="fab fa-python fa-5x"></i>
+                        <br>
+                        <h3>Python</h3>
+                        <p>Django | Mosquitto | Flask</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        <i class="fab fa-java fa-5x"></i>
+                        <br>
+                        <h3>Java</h3>
+                        <p>Hibernate | Persistence | Mockito<br>Maven | JUnit | Spring</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        <i class="fas fa-database fa-5x"></i>
+                        <br>
+                        <h3>SQL</h3>
+                        <p>MySQL | PostgreSQL | Oracle<br>RDBMS | DOD</p>
+                    </div>
+                    <div class="col-3 text-center">
+                        <i class="fab fa-git-alt fa-5x"></i>
+                        <br>
+                        <h3>Git</h3>
+                        <p>github | gitlab | git bash</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h1 class="display-1 text-center typed-hello">Placeholder</h1>
+                <div class="row my-5">
+                    <div class="col-4 text-center">
+                        <h5>Web Development</h5>
+                        <i class="fab fa-bootstrap fa-2x mx-1"></i>
+                        <i class="fab fa-html5 fa-2x mx-1"></i>
+                        <i class="fab fa-aws fa-2x mx-1"></i>
+                        <i class="fab fa-heroku fa-2x mx-1"></i>
                     </div>
-                    <div class="col-6">
-                        <h1 class="display-1 text-center typed-hello">Placeholder</h1>
+                    <div class="col-4 text-center">
+                        <h5>Misc</h5>
+                        <i class="fab fa-unity fa-2x mx-2"></i>
+                        <i class="fab fa-docker fa-2x mx-2"></i>
                     </div>
+                    <div class="col-4 text-center">
+                        <h5>Operating Systems</h5>
+                        <i class="fab fa-windows fa-2x mx-1"></i>
+                        <i class="fab fa-ubuntu fa-2x mx-1"></i>
+                        <i class="fab fa-fedora fa-2x mx-1"></i>
+                        <i class="fab fa-raspberry-pi fa-2x mx-1"></i>
+                    </div>
+                </div>
+                <div class="container text-center dynamic-text">
+                    <p>Bash | Restful API | CI/CD (Travis) | Subversion | C#</p>
                 </div>
             </div>
 
@@ -64,7 +120,7 @@
                                     {% endfor %}
                                 </ul>
                             {% else %}
-                                <h1 class="text-center">Nothing to see here, move along!</h1>
+                                <h1 class="text-center">Nothing to see yet!</h1>
                             {% endif %}
                         </div>
 
@@ -74,18 +130,32 @@
 
             {# Contact #}
             <div class="container-fluid vh-100" id="contact">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="display-1 text-center">Contact</h1>
+                <h1 class="display-1 text-center">Contact</h1>
+                <div class="h-75">
+                    <div class="row">
+                        <div class="col-4-lg mx-auto">
+                            <div class="display-1">HEY</div>
+                        </div>
+                        <div class="col-8-lg mx-auto">
+                            <div class="d-flex flex-row align-items-center">
+                                <a href="https://codepen.io/benjaminpalko"><i class="fab fa-codepen fa-2x"></i></a>
+                                <a href="https://github.com/BenjaminPalko"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/benjaminpalko/"><i
+                                        class="fab fa-linkedin fa-2x"></i></a>
+                            </div>
+
+                            <div class="d-flex flex-row">
+                                <a class="btn btn-outline-primary" href="mailto:benjaminpalko@hotmail.com">benjaminpalko@hotmail.com
+                                    <i class="fas fa-paper-plane"></i></a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h1 class="display-1 text-center typed-hello">Placeholder</h1>
-                    </div>
-                    <div class="col-6">
-                        <h1 class="display-1 text-center typed-hello">Placeholder</h1>
-                    </div>
+                <div class="text-center d-flex h-25">
+                    <img class="img-fluid mx-auto bg-dark align-self-end"
+                         src="{% static 'images/built-on-heroku-light.svg' %}" height="150" width="300"
+                         alt="Built on Heroku" type="image/svg"/>
                 </div>
             </div>
         </div>
