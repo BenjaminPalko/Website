@@ -15,7 +15,7 @@
 
 
             <div class="h-50 text-center mt-auto">
-                <h1 class="display-1">Benjamin Palko</h1>
+                <h1 class="display-1 border-bottom border-danger pb-2">Benjamin Palko</h1>
                 <h4 class="display-4">Software Engineer</h4>
             </div>
             <div class="display-4  text-center pb-3">
@@ -30,68 +30,70 @@
 
 
         {# About #}
-        <div class="container min-vh-100" id="about">
+        <div class="container-fluid vh-100 d-flex flex-column justify-content-around" id="about">
 
-            <div class="container dynamic-text text-center px-5 my-3">
-                <h1 class="display-2 text-center border-bottom mb-2">About</h1>
+            <h1 class="display-2 border-bottom border-danger text-center mb-2">About</h1>
+
+            <div class="dynamic-text text-center">
+
                 <p>
                     I'm a Software Engineering graduate from Carleton University living in Brockville,
                     ON.
                 </p>
                 <p>
-                    I am currently working as a Junior Developer, spending the majority of my time with
+                    I currently work as a Junior Developer at Bizxcel <a target="_blank"
+                                                                         href="https://www.bizxcel.com/"><i
+                        class="fas fa-link text-info"></i></a>, spending the majority of my time with
                     Java EE application servers. I work mainly Wildfly and Oracle databases for mapping
                     logic of insurance data.
                 </p>
-                <p>
-                    I am expanding my skills to front-end web development with the Python on my own time,
-                    learning the Django frame-work to build my personal website.
-                </p>
             </div>
 
-            <h1 class="text-center display-3 my-5">Skills</h1>
-            <div class="row">
+            <h1 class="text-center display-3 border-bottom border-danger w-75 align-self-center">Skills</h1>
 
-                <div class="col-3 text-center">
+            <div class="d-flex justify-content-around">
+
+                <div class="text-center">
                     <i class="fab fa-python fa-5x"></i>
                     <br>
                     <h3>Python</h3>
                     <p>Django | Mosquitto | Flask</p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="text-center">
                     <i class="fab fa-java fa-5x"></i>
                     <br>
                     <h3>Java</h3>
                     <p>Hibernate | Persistence | Mockito<br>Maven | JUnit | Spring</p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="text-center">
                     <i class="fas fa-database fa-5x"></i>
                     <br>
                     <h3>SQL</h3>
                     <p>MySQL | PostgreSQL | Oracle<br>RDBMS | DOD</p>
                 </div>
-                <div class="col-3 text-center">
+                <div class="text-center">
                     <i class="fab fa-git-alt fa-5x"></i>
                     <br>
                     <h3>Git</h3>
                     <p>github | gitlab | git bash</p>
                 </div>
+
             </div>
 
-            <div class="row my-5">
-                <div class="col-4 text-center">
+            <div class="d-flex justify-content-around">
+                <div class="text-center">
                     <h5>Web Development</h5>
                     <i class="fab fa-bootstrap fa-2x mx-1"></i>
                     <i class="fab fa-html5 fa-2x mx-1"></i>
                     <i class="fab fa-aws fa-2x mx-1"></i>
                     <i class="fab fa-heroku fa-2x mx-1"></i>
                 </div>
-                <div class="col-4 text-center">
+                <div class="text-center">
                     <h5>Misc</h5>
                     <i class="fab fa-unity fa-2x mx-2"></i>
                     <i class="fab fa-docker fa-2x mx-2"></i>
                 </div>
-                <div class="col-4 text-center">
+                <div class="text-center">
                     <h5>Operating Systems</h5>
                     <i class="fab fa-windows fa-2x mx-1"></i>
                     <i class="fab fa-ubuntu fa-2x mx-1"></i>
@@ -100,18 +102,16 @@
                 </div>
             </div>
 
-            <div class="container text-center dynamic-text">
-                <p>Bash | Restful API | CI/CD (Travis) | Subversion | C#</p>
-            </div>
+            <p class="text-center dynamic-text border-bottom border-danger w-25 align-self-center pb-3">Bash | Restful API | CI/CD (Travis) | Subversion | C#</p>
 
         </div>
 
 
         {# Blog #}
-        <div class="container-fluid vh-100 bg-light text-dark" id="blog">
+        <div class="container-fluid" id="blog">
             <div class="row">
                 <div class="col">
-                    <h1 class="display-1 text-center">Blog</h1>
+                    <h1 class="display-1 text-center border-bottom border-danger pb-2">Blog</h1>
                 </div>
             </div>
             <div class="row">
@@ -137,63 +137,59 @@
 
 
         {# Contact #}
-        <div class="container-fluid vh-100" id="contact">
+        <div class="container-fluid vh-100 d-flex flex-column justify-content-around" id="contact">
 
             <div class="h-25">
-                <h1 class="display-3 text-center pt-5">Contact</h1>
+                <h1 class="display-3 text-center pt-5 border-bottom border-danger">Contact</h1>
             </div>
 
-            <div class="h-50">
-
-                <div class="row pb-5">
-                    <div class="col d-flex justify-content-center">
-                        <div class="flex-column text-center">
-                            <h3>Benjamin Palko</h3>
-                            <p class="dynamic-text">Software Engineer</p>
-                            <a class="dynamic-text" href="mailto:benjaminpalko@hotmail.com">benjaminpalko@hotmail.com</a>
-                        </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <div class="flex-column text-center">
+                        <h3 class="text-danger">Benjamin Palko</h3>
+                        <p class="dynamic-text">Software Engineer</p>
+                        <a class="dynamic-text text-danger" href="mailto:benjaminpalko@hotmail.com">benjaminpalko@hotmail.com</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="row my-5 pt-5">
-                    <div class="col-3"></div>
-                    <div class="col-6 d-flex justify-content-around">
-                        <div class="text-center">
-                            <a class="btn" target="_blank" href="https://codepen.io/benjaminpalko">
-                                <i class="fab fa-codepen fa-3x text-light"></i>
-                                <p class="dynamic-text text-light">Codepen</p>
-                            </a>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn" target="_blank"  href="https://github.com/BenjaminPalko">
-                                <i class="fab fa-github fa-3x text-light"></i>
-                                <p class="dynamic-text text-light">Github</p>
-                            </a>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn" target="_blank"  href="https://discord.gg/h98QHsY">
-                                <i class="fab fa-discord fa-3x text-light"></i>
-                                <p class="dynamic-text text-light">Discord</p>
-                            </a>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn" target="_blank"  href="https://www.linkedin.com/in/benjaminpalko/">
-                                <i class="fab fa-linkedin fa-3x text-light"></i>
-                                <p class="dynamic-text text-light">LinkedIn</p>
-                            </a>
-
-                        </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 d-flex justify-content-around">
+                    <div class="text-center">
+                        <a class="btn" target="_blank" href="https://codepen.io/benjaminpalko">
+                            <i class="fab fa-codepen fa-3x text-light"></i>
+                            <p class="dynamic-text text-light">Codepen</p>
+                        </a>
                     </div>
-                    <div class="col-3"></div>
-                </div>
+                    <div class="text-center">
+                        <a class="btn" target="_blank" href="https://github.com/BenjaminPalko">
+                            <i class="fab fa-github fa-3x text-light"></i>
+                            <p class="dynamic-text text-light">Github</p>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn" target="_blank" href="https://discord.gg/h98QHsY">
+                            <i class="fab fa-discord fa-3x text-light"></i>
+                            <p class="dynamic-text text-light">Discord</p>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a class="btn" target="_blank" href="https://www.linkedin.com/in/benjaminpalko/">
+                            <i class="fab fa-linkedin fa-3x text-light"></i>
+                            <p class="dynamic-text text-light">LinkedIn</p>
+                        </a>
 
+                    </div>
+                </div>
+                <div class="col-3"></div>
             </div>
 
             <div class="text-center d-flex h-25">
                 <a class="mx-auto align-self-end" target="_blank" href="https://www.heroku.com/">
                     <img class="img-fluid bg-dark"
-                     src="{% static 'images/built-on-heroku-light.svg' %}" height="150" width="300"
-                     alt="Built on Heroku" type="image/svg"/>
+                         src="{% static 'images/built-on-heroku-light.svg' %}" height="150" width="300"
+                         alt="Built on Heroku" type="image/svg"/>
                 </a>
             </div>
 
