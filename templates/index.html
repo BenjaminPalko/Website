@@ -39,9 +39,10 @@
                     I'm a Software Engineering graduate from Carleton University.
                 </p>
                 <p>
-                    I currently work as a Full-stack Junior Developer at Bizxcel <sup><a target="_blank"
-                                                                                         href="https://www.bizxcel.com/"><i
-                        class="fas fa-external-link-alt text-primary"></i></a></sup>, spending the majority of my time with
+                    I currently work as a Software Developer at Mitel <sup><a target="_blank"
+                                                                                         href="https://www.mitel.com/"><i
+                        class="fas fa-external-link-alt text-primary"></i></a></sup>, spending the majority of my time
+                    with
                     Java EE application servers. I work mainly with Wildfly and Oracle databases for mapping
                     logic of insurance data along with various smaller support applications.
                 </p>
@@ -140,9 +141,11 @@
                         {% if blog_post_list %}
                             <ul class="list-group">
                                 {% for post in blog_post_list %}
-                                    <li class="list-group-item bg-transparent border border-0">
-                                        {% include 'blog/blogpost_card.html' with post=post %}
-                                    </li>
+                                    {% if post.published %}
+                                        <li class="list-group-item bg-transparent border border-0">
+                                            {% include 'blog/blogpost_card.html' with post=post %}
+                                        </li>
+                                    {% endif %}
                                 {% endfor %}
                             </ul>
                         {% else %}
